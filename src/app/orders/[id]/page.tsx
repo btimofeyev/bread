@@ -252,22 +252,16 @@ function OrderDetailContent() {
           <CardContent className="space-y-4">
             <div>
               <p className="text-sm text-muted-foreground">Name</p>
-              <p className="font-medium">{order.customer_name || 'Not provided'}</p>
+              <p className="font-medium">{order.customer_name || order.profile?.name || 'Not provided'}</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Email</p>
-              <p className="font-medium">{order.customer_email || 'Not provided'}</p>
+              <p className="font-medium">{order.profile?.email || 'Not provided'}</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Phone</p>
-              <p className="font-medium">{order.customer_phone || 'Not provided'}</p>
+              <p className="font-medium">{order.customer_phone || order.profile?.phone || 'Not provided'}</p>
             </div>
-            {order.customer_address && (
-              <div>
-                <p className="text-sm text-muted-foreground">Address</p>
-                <p className="font-medium">{order.customer_address}</p>
-              </div>
-            )}
           </CardContent>
         </Card>
 

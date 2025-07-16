@@ -96,6 +96,8 @@ export interface Database {
           delivery_method: string | null
           notes: string | null
           stripe_payment_link_id: string | null
+          customer_name: string | null
+          customer_phone: string | null
           created_at: string | null
           updated_at: string | null
         }
@@ -112,6 +114,8 @@ export interface Database {
           delivery_method?: string | null
           notes?: string | null
           stripe_payment_link_id?: string | null
+          customer_name?: string | null
+          customer_phone?: string | null
           created_at?: string | null
           updated_at?: string | null
         }
@@ -128,6 +132,8 @@ export interface Database {
           delivery_method?: string | null
           notes?: string | null
           stripe_payment_link_id?: string | null
+          customer_name?: string | null
+          customer_phone?: string | null
           created_at?: string | null
           updated_at?: string | null
         }
