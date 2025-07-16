@@ -1,0 +1,9 @@
+.next
+node_modules
+*.md
+public
+.vercel
+dist
+build
+coverage
+.env*
