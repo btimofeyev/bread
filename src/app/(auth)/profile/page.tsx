@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useAuth } from '@/contexts/auth-context'
 import { MainLayout, PageHeader } from '@/components/layout/main-layout'
@@ -11,7 +11,7 @@ import { formatCurrency, formatDateTime } from '@/lib/utils'
 import { useCustomerOrders } from '@/hooks/use-customer-orders'
 import Link from 'next/link'
 
-export default function ProfilePage() {
+function ProfileContent() {
   const searchParams = useSearchParams()
   const { user, profile, signOut, updateProfile, loading } = useAuth()
   const { orders, loading: ordersLoading } = useCustomerOrders(user?.id)
@@ -345,5 +345,23 @@ export default function ProfilePage() {
         )}
       </div>
     </MainLayout>
+  )
+}
+
+export default function ProfilePage() {
+  return (
+    <Suspense fallback={
+      <MainLayout>
+        <PageHeader title="Profile" />
+        <div className="p-4">
+          <div className="animate-pulse space-y-4">
+            <div className="h-32 bg-muted rounded-xl" />
+            <div className="h-48 bg-muted rounded-xl" />
+          </div>
+        </div>
+      </MainLayout>
+    }>
+      <ProfileContent />
+    </Suspense>
   )
 }

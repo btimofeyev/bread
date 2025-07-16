@@ -2,6 +2,8 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyAdminUser, verifyAuthenticatedUser } from '@/lib/auth/admin-check'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   try {
     const serviceSupabase = createServiceClient()
