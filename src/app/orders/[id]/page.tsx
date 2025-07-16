@@ -160,7 +160,7 @@ function OrderDetailContent() {
     <MainLayout>
       <PageHeader 
         title={`Order #${order.order_number}`}
-        description={`Placed on ${formatDateTime(order.created_at)}`}
+        description={order.created_at ? `Placed on ${formatDateTime(order.created_at)}` : 'Order details'}
       />
       
       <div className="p-4 space-y-6">
