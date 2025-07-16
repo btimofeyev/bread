@@ -215,6 +215,32 @@ vercel --prod   # Production deployment
 - Configuration updates
 - New environment variables
 
+## 👑 Admin User Management
+
+### Adding Admin Users
+Use the provided script to grant admin access to users:
+
+```bash
+# Add admin access (user must sign up first)
+node scripts/add-admin-user.js user@example.com
+
+# The script will:
+# 1. Check if user exists in authentication system
+# 2. Create or update their profile with admin role
+# 3. Verify the changes
+```
+
+### Current Admin Users
+- `btimofeyev@gmail.com` (primary admin)
+- `gamdedesknews@gmail.com` (secondary admin)
+
+### Admin Features
+- Access to `/dashboard` - Admin overview with analytics
+- Access to `/dashboard/orders` - Order management 
+- Access to `/dashboard/menu` - Product/menu management
+- Access to `/dashboard/analytics` - Business analytics
+- Real-time order updates and management
+
 ## 🛠️ Troubleshooting
 
 ### Quick Fixes
@@ -239,4 +265,6 @@ curl https://your-project.supabase.co/rest/v1/
 - **Site URL**: `http://localhost:3000`
 - **Redirect URLs**: `http://localhost:3000/auth/callback`
 - **RLS**: Ensure proper Row Level Security policies
-- **Admin Email**: Set `btimofeyev@gmail.com` as admin role
+- **Admin Emails**: 
+  - `btimofeyev@gmail.com` (primary admin)
+  - `gamdedesknews@gmail.com` (secondary admin)
