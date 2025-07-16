@@ -5,6 +5,8 @@ import { verifyAuthenticatedUser } from '@/lib/auth/admin-check'
 import type { OrderItem, Product } from '@/types'
 import { createPaymentLinkSchema, validateRequest } from '@/lib/validations/api'
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(request: NextRequest) {
   try {
     // Verify user is authenticated

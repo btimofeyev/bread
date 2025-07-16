@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { verifyAuthenticatedUser } from '@/lib/auth/admin-check'
 import { createOrderSchema, validateRequest } from '@/lib/validations/api'
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(request: NextRequest) {
   try {
     const serviceSupabase = createServiceClient()

@@ -4,6 +4,8 @@ import { verifyAdminUser } from '@/lib/auth/admin-check'
 import { updateProductSchema, validateRequest } from '@/lib/validations/api'
 import type { Updates } from '@/types'
 
+export const dynamic = 'force-dynamic'
+
 export async function PATCH(
   request: NextRequest,
   { params }: { params: { id: string } }
