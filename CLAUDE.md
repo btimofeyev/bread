@@ -232,7 +232,7 @@ node scripts/add-admin-user.js user@example.com
 
 ### Current Admin Users
 - `btimofeyev@gmail.com` (primary admin)
-- `gamdedesknews@gmail.com` (secondary admin)
+- `gamedesknews@gmail.com` (secondary admin)
 
 ### Admin Features
 - Access to `/dashboard` - Admin overview with analytics
@@ -267,4 +267,4 @@ curl https://your-project.supabase.co/rest/v1/
 - **RLS**: Ensure proper Row Level Security policies
 - **Admin Emails**: 
   - `btimofeyev@gmail.com` (primary admin)
-  - `gamdedesknews@gmail.com` (secondary admin)
+  - `gamedesknews@gmail.com` (secondary admin)
