@@ -131,7 +131,7 @@ function ProfileContent() {
   const handleSignOut = async () => {
     try {
       await signOut()
-      toast.success('Signed out successfully')
+      // Redirect is handled in the signOut function
     } catch (error) {
       toast.error('Failed to sign out')
     }
